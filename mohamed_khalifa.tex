@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author: Jake Gutierrez
+% Based oon https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Custom 
+\usepackage{fontawesome5} % for using icons
+\usepackage{graphicx} % For scaling
+
+\definecolor{secondaryColor}{RGB}{0, 79, 144}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Custom
+\newcommand{\linkIcon}{\scalebox{0.75}{ \faExternalLink*}}
+\newcommand{\link}[1]{\href{#1}{\linkIcon}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Mohamed Khalifa} \\ \vspace{1pt}
+    \textbf{Software Engineer} \\  \vspace{3pt}
+    % Software Engineer I
+    \faMapMarker* Alexandria, Egypt $|$
+    \href{tel:201029973998}{{\small {\footnotesize \faPhone*}\hspace*{0.13cm}20 102 997 3998}} $|$ 
+    \href{mailto:makhalifa02@gmail.com}{\faEnvelope[regular]\hspace*{0.13cm}makhalifa02@gmail.com} $|$ 
+    \href{https://www.linkedin.com/in/5alifa}{\faLinkedinIn \hspace*{0.13cm}5alifa} $|$
+    \href{https://github.com/5alifaa}{\faGithub\hspace*{0.13cm}5alifaa}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+\item \small
+Backend Software Engineer with experience building integrations, modernizing legacy systems, and shipping production features across ERP, healthcare, and AI-enabled products. Strongest in TypeScript/Node.js, Laravel, Go, PostgreSQL, and Odoo integrations, with hands-on work in performance optimization, asynchronous systems, and business-critical workflows.
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer I}{June 2025 -- Present}
+      {\textbf{Cartona} \href{https://cartona.com/}{\linkIcon}}{Cairo, Egypt}
+      \resumeItemListStart
+        \resumeItem{Contributed to migrating the retailer backend from Rails to Laravel and Go, reducing API latency from 500ms–3s to around 90ms using OpenSearch and PostgreSQL.}
+        \resumeItem{Built an Odoo integration to sync orders, inventory, and deliveries in real time with merchants’ ERP systems.}
+        \resumeItem{Separated the enterprise order flow from the marketplace flow, moving the lifecycle into Odoo to align business workflows across purchasing, sales, and fulfillment operations.}
+        \resumeItem{Investigated and fixed a payment bug caused by a race condition in asynchronous jobs.}
+        \resumeItem{Contributed to designing the integration and transaction flow architecture for an upcoming credit platform, covering partner integrations, authentication, session handling, and transaction lifecycle.}        
+      \resumeItemListEnd
+    \resumeSubheading
+      {Freelance Software Engineer}{Aug 2024 -- Present}
+      {\textbf{Switchable IT Solutions} \href{https://odoo.switchable.org/}{\linkIcon}}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built an Odoo-based \textbf{Laboratory Information System} covering test ordering, sample tracking, results, and reporting.}
+        \resumeItem{Deployed the system in 2 production laboratories: \href{https://mozmenlabs.com/}{Mozmen Labs}\linkIcon \ and \href{https://www.elfanarlabs.com/}{El Fanar Labs}\linkIcon.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineer}{Feb 2025 – Jun 2025}
+      {\textbf{Tech Hive} $|$ AppAsap \href{https://www.appasap.ai/}{\linkIcon}}{Alexandria, Egypt}
+      \resumeItemListStart
+        \resumeItem{Built a GPT-based code generation tool that generated project structure, routes, and boilerplate from natural language prompts.}
+        \resumeItem{Added caching and batched API calls to reduce cost and improve generation speed.}
+        \resumeItem{Implemented an RBAC system with Zod schemas to improve permission validation.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{iSkala} (Freelance) $|$ \emph{Next.js, PostgreSQL, Stripe}}{ \href{https://enrich.iskala.ai/}{live\linkIcon}}
+          \resumeItemListStart
+            \resumeItem{Built the backend for a B2B lead enrichment platform with email, LinkedIn, and phone lookup.}
+            \resumeItem{Added AI email generation and a Stripe-based credit system.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{DealBlaster.ai} (Freelance) $|$ \emph{Next.js, Gmail API, Stripe}}{ \href{https://dealblaster.ai/}{live\linkIcon}}
+          \resumeItemListStart
+            \resumeItem{Built an email outreach platform that generates personalized cold emails using GPT.}
+            \resumeItem{Integrated Stripe and Gmail API, supporting workflows sending 100+ emails per day.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Itqan Admin Panel} (Freelance) $|$ \emph{Nest.js, ReactAdmin, MongoDB, AWS}}{ \href{https://itqanservices.ae/}{live\linkIcon}}
+          \resumeItemListStart
+            \resumeItem{Built and deployed a bilingual admin panel for a UAE-based platform serving 1,000+ users.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Alexandria University}{Sept. 2019 - Jul. 2023}
+      {B.Sc. in Computer Science}{Alexandria, Egypt}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & ACHIEVEMENTS-----------
+\section{Achievements}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{ECPC Contestant} \href{https://icpc.global/ICPCID/M851N8IAV7X1}{\linkIcon} $|$ Egyptian Collegiate Programming Contest (ICPC)}{2022}
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Frameworks}{: TypeScript, Node.js, Nest.js, Go, Laravel, Odoo (Python), Next.js} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, OpenSearch, Redis} \\
+     \textbf{Infrastructure \& Tools}{: Docker, Kubernetes, AWS, GitHub Actions, Sentry, New Relic} \\
+    }}
+ \end{itemize}
+
+\end{document}
